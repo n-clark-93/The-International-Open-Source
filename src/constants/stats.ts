@@ -22,6 +22,7 @@ export enum RoomStatsKeys {
   MinHaulerCost = 'mhc',
   EnergyOutputTransactionCosts = 'eotc',
   EnergyTerminalSentDomestic = 'etsd',
+  EnergyTerminalReceivedDomestic = 'etrd',
   EnergyTerminalSentOther = 'etso',
   CpuUsed = 'cpu',
 
@@ -61,6 +62,7 @@ export const averageStatNames: Set<keyof CommuneStats | keyof RoomStats> = new S
   RoomStatsKeys.RemoteEnergyOutputBuild,
   RoomStatsKeys.EnergyOutputTransactionCosts,
   RoomStatsKeys.EnergyTerminalSentDomestic,
+  RoomStatsKeys.EnergyTerminalReceivedDomestic,
   RoomStatsKeys.EnergyTerminalSentOther,
   RoomStatsKeys.CpuUsed,
 ])
