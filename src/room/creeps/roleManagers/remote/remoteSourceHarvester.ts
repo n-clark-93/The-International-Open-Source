@@ -383,7 +383,8 @@ export class RemoteHarvester extends Creep {
 
   buildContainer(): number {
     // Don't build new remote containers until we can reserve the room
-    if (!CommuneUtils.shouldRemoteContainers(this.room)) return Result.noAction
+    // if (!CommuneUtils.shouldRemoteContainers(this.room)) return Result.noAction
+    if (!this.room.controller.reservation || this.room.controller.reservation.username !== Memory.me) return Result.noAction
 
     // Make sure we're a bit ahead source regen time
 
