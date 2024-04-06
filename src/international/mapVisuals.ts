@@ -22,7 +22,7 @@ export class MapVisualsManager {
             const roomMemory = Memory.rooms[roomName]
 
             const type = roomMemory[RoomMemoryKeys.type]
-            if (!type) continue
+            if (type === undefined || type === null) continue
 
             if (roomMemory[RoomMemoryKeys.type] === RoomTypes.commune) {
                 this.visualizeCommune(roomName, roomMemory)
@@ -45,11 +45,11 @@ export class MapVisualsManager {
                 const room = Game.rooms[roomName]
                 if (!room) continue
 
-                const anchor = room.roomManager.anchor
-                if (!anchor) throw Error('No anchor for mapVisuals commune ' + roomName)
-
+                // Energy
+                const storedEnergy = room.roomManager.resourcesInStoringStructures.energy;
+                const storedEnergyPercent = Math.floor((storedEnergy / CommuneUtils.minStoredEnergy(room)) * 100);
                 Game.map.visual.text(
-                    `⚡${room.roomManager.resourcesInStoringStructures.energy} / ${CommuneUtils.minStoredEnergy(room)}`,
+                    `⚡${storedEnergy}( ${storedEnergyPercent}%)`,
                     new RoomPosition(2, 8, roomName),
                     {
                         align: 'left',
@@ -84,6 +84,10 @@ export class MapVisualsManager {
                         fontSize: 4,
                     },
                 )
+
+                const anchor = room.roomManager.anchor
+                // if (!anchor) throw Error('No anchor for mapVisuals commune ' + roomName)
+                if (!anchor) continue;
 
                 if (roomMemory[RoomMemoryKeys.workRequest]) {
                     Game.map.visual.line(
