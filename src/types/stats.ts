@@ -29,6 +29,7 @@ export interface CommuneStats extends RoomStats {
     [RoomStatsKeys.MinHaulerCost]: number
     [RoomStatsKeys.EnergyOutputTransactionCosts]: number
     [RoomStatsKeys.EnergyTerminalSentDomestic]: number
+    [RoomStatsKeys.EnergyTerminalReceivedDomestic]: number
     [RoomStatsKeys.EnergyTerminalSentOther]: number
     [RoomStatsKeys.BatteriesStoredTimes10]: number
     [RoomStatsKeys.CpuUsed]: number

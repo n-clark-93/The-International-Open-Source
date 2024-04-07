@@ -90,6 +90,11 @@ export class TransactionsManager {
         RoomStatsKeys.EnergyTerminalSentDomestic,
         transaction.amount,
       )
+      StatsManager.updateCommuneStat(
+        transaction.to,
+        RoomStatsKeys.EnergyTerminalReceivedDomestic,
+        transaction.amount,
+      )
     }
     // Not a domestic trade
     else {

@@ -43,6 +43,7 @@ export class StatsManager {
         [RoomStatsKeys.MinHaulerCost]: 0,
         [RoomStatsKeys.EnergyOutputTransactionCosts]: 0,
         [RoomStatsKeys.EnergyTerminalSentDomestic]: 0,
+        [RoomStatsKeys.EnergyTerminalReceivedDomestic]: 0,
         [RoomStatsKeys.EnergyTerminalSentOther]: 0,
         [RoomStatsKeys.CpuUsed]: 0,
       })
