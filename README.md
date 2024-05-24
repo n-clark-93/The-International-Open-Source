@@ -21,7 +21,7 @@ If you have specific questions or want to discuss the bot, please join our disco
 
 [![Discord link](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/5QubDsB786)
 
-![Screenshot 2022-08-08 221219](https://user-images.githubusercontent.com/48334001/183549645-07cd2907-2e2f-443f-bcba-b70bce5fa28d.png)
+![image](https://github.com/The-International-Screeps-Bot/The-International-Open-Source/assets/48334001/961d8b2f-d63c-4ced-8a81-44c5e838f20a)
 ![map visuals](https://user-images.githubusercontent.com/48334001/232357947-7febd5e6-da7a-4f4f-b3fe-92bad7bb9005.png)
 ![Information panel](images/grafana.png)
 
