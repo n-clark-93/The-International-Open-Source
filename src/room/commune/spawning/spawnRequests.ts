@@ -260,7 +260,7 @@ export class SpawnRequestsManager {
             defaultParts: [],
             extraParts: [CARRY, CARRY, MOVE],
             partsQuota: carryPartsNeed * 3,
-            partsMultiplier: carryPartsNeed / 2,
+            partsMultiplier: 0,
             minCostPerCreep: costStep,
             maxCostPerCreep: maxCost,
             priority,

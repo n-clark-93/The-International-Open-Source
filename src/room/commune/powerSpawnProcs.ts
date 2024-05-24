@@ -75,6 +75,7 @@ export class PowerSpawnProcs {
         target: powerSpawn,
         /* onlyFull: true, */
         type: RoomLogisticsRequestTypes.transfer,
+        resourceType: RESOURCE_POWER,
         priority: scalePriority(
           powerSpawn.store.getCapacity(RESOURCE_POWER),
           powerSpawn.usedReserveStore,

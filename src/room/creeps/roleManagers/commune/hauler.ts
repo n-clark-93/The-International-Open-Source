@@ -558,7 +558,7 @@ export class Hauler extends Creep {
 
     if (commune.communeManager.remoteResourcePathType === RoomMemoryKeys.remoteSourceHubPaths) {
       if (this.room.name === commune.name) {
-        CreepOps.passiveRenew(this)
+        this.passiveRenew()
 
         const logisticsResult = CreepOps.runRoomLogisticsRequestsAdvanced(this, {
           types: new Set([RoomLogisticsRequestTypes.transfer]),
@@ -687,7 +687,7 @@ export class Hauler extends Creep {
     }
 
     if (this.room.name === commune.name) {
-      CreepOps.passiveRenew(this)
+        this.passiveRenew()
 
       CreepOps.runRoomLogisticsRequestAdvanced(this, {
         types: new Set<RoomLogisticsRequestTypes>([RoomLogisticsRequestTypes.transfer]),
@@ -1056,7 +1056,7 @@ export class Hauler extends Creep {
   }
 
   runCommuneLogistics?() {
-    CreepOps.passiveRenew(this)
+    this.passiveRenew()
 
     if (CreepOps.runRoomLogisticsRequestsAdvanced(this) === Result.action) {
       this.relay()
