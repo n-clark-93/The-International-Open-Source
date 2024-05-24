@@ -5,6 +5,7 @@
   "files": [
     "dist"
   ],
+  "type":"module",
   "main": "dist/main.js",
   "scripts": {
     "init": "npm i",
