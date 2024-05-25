@@ -73,9 +73,16 @@ export class RoomNameUtils {
         const searchRoom = Game.rooms[searchRoomName]
         if (!searchRoom) return
 
+        const distance = this.advancedFindDistance(roomName, searchRoomName)
+
+        if (distance === 1) {
+            communeScore = 10000
+            return
+        }
+
         const score =
           Math.pow(
-            Math.abs(this.advancedFindDistance(roomName, searchRoomName) - preferredCommuneRange),
+            Math.abs(distance - preferredCommuneRange),
             1.8,
           ) +
           (maxControllerLevel - searchRoom.controller.level)

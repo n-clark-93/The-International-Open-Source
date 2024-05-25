@@ -351,12 +351,13 @@ export class CollectiveManager {
 
     static getFunnelingRoomNames() {
 
-        const funnelTargets = new Set<string>()
         // How much energy we are allowed to distribute each tick of funneling
         let funnelDistribution = 0
         const funnelTargetQuotas: { [roomName: string]: number } = {}
 
         const funnelOrder = this.getFunnelOrder()
+
+        const funnelTargets = new Set<string>()
         funnelTargets.add(funnelOrder[0])
 
         for (const roomName of funnelOrder) {
@@ -370,6 +371,8 @@ export class CollectiveManager {
                 funnelDistribution += desiredStrength - maxUpgradeStrength
                 continue
             }
+            // If we are RCL 8, no need for us to get funneled
+            if (room.controller.level === 8) continue
 
             funnelTargetQuotas[roomName] = maxUpgradeStrength
         }
@@ -378,6 +381,7 @@ export class CollectiveManager {
             LogOps.log('Funnel quotas', `distribution: ${funnelDistribution}, quotas: ${JSON.stringify(funnelTargetQuotas)}`, { type: LogTypes.debug })
         }
 
+        if (Object.keys(funnelTargetQuotas).length === 0) return new Set<string>();
         if (funnelDistribution === 0) return funnelTargets
 
         for (const roomName in funnelTargetQuotas) {
