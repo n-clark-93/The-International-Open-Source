@@ -303,7 +303,7 @@ export class Operator extends PowerCreep {
     //
 
     this.powered = true
-    delete Memory.powerCreeps[CreepMemoryKeys.powerTask]
+    delete Memory.powerCreeps[this.name][CreepMemoryKeys.powerTask]
 
     return Result.success
   }

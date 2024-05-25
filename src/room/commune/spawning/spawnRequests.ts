@@ -856,7 +856,7 @@ export class SpawnRequestsManager {
         // If there is a terminal and it is sufficient RCL, and there's a funnel target and we aren't it, then don't allow upgraders to spawn
         if (this.communeManager.room.terminal && this.communeManager.room.controller.level >= 6) {
           const funnelingRoomNames = CollectiveManager.getFunnelingRoomNames()
-          if (!funnelingRoomNames.has(this.communeManager.room.name)) {
+          if (funnelingRoomNames.size > 0 && !funnelingRoomNames.has(this.communeManager.room.name)) {
             return false
           }
         }
