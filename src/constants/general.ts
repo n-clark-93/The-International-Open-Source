@@ -596,25 +596,26 @@ export const version = `v${majorVersion}.${global.settings.breakingVersion}`
 // Set of messages to randomly apply to commune rooms
 
 export const communeSign =
-  'A commune of the proletariat. Bourgeoisie not welcome here! Now Collectivized. ' + version
+  'Welcome to Crimson Imperia. Glory to the Hive Mind! Now United. ' + version
 
 /**
  * Set of messages to randomly apply to non-commune rooms
  */
 export const nonCommuneSigns = [
-  'The top 1% have more money than the poorest 4.5 billion',
-  'McDonalds workers in the US make $10/hour. In Denmark, as a result of unions, they make $22/hour',
-  'We have democracy in our policial system, should we not have it in our companies too?',
-  'Workers of the world, unite; you have nothing to lose but your chains!',
-  'Real democracy requires democracy in the workplace',
-  'Adults spend a combined 13 years of their life under a dictatorship: the workplace',
-  'Socialism is about worker ownership over the workplace',
-  'Are trans women women? Yes.',
-  'Advancing the LGBTQ+ agenda <3',
-  'Does Jeff Bezos work 56,000 times harder than his average worker? Because he gets paid like it',
-  'We already eat from the trashcan all the time. The name of this trash is ideology - Slavoj Zizek',
-  'Religion is the opium of the people - Karl Marx',
+  'Strength through unity, honor through loyalty.',
+  'The Crimson Imperia thrives on the dedication of its people.',
+  'Together, we forge a destiny of greatness.',
+  'Our strength lies in our unity and our resolve.',
+  'For the glory of the Imperia, we stand united.',
+  'Every citizen is a vital part of our grand vision.',
+  'Loyalty to the Imperia is loyalty to a brighter future.',
+  'Through shared purpose, we achieve unparalleled might.',
+  'The Imperia\'s strength is in its united heart.',
+  'In the Crimson Imperia, every voice contributes to our harmony.',
+  'Our destiny is forged in the fires of our collective will.',
+  'Glory to the Crimson Imperia, forever united and strong.',
 ]
+
 
 export const tauntSign = '✊🛠️'
 
